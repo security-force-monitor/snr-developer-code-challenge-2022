@@ -2,15 +2,15 @@
 
 Hello and welcome to Security Force Monitor's (SFM) code challenge for Senior Developers!
 
-We're asking you to do a data wrangling and tooling task. You'll be creating a tool that transforms SFM's tabular data about security force organizational structures into graph that analysed and visualised.
+We're asking you to do a data wrangling and tooling task. You'll be creating a tool that transforms SFM's tabular data about security force organizational structures into a graph that analysed and visualised.
 
 ### Task
 
-The data provided in `data/202106251341-HEAD-Mali-Backup-slime.xlsx` describes the security and defences forces of Mali. 
+The data provided in `data/202106251341-HEAD-Mali-Backup-slim.tsv` describes the security and defences forces of Mali. 
 
 The task is as follows:
 
-- Create a command line tool that can construct a directed graph from the given data and show the parentage and children of the unit called `32 Régiment d’Infanterie Motorisée` and output it in GraphML format.
+- Create a command line tool that can construct a directed graph from the given data, show the parentage and children of the unit called `32 Régiment d’Infanterie Motorisée` and output it in GraphML format.
 
 Your application should be:
 
@@ -23,7 +23,7 @@ The command should be executed from the command line in the following manner:
 ```
 graph --input data/202106251341-HEAD-Mali-Backup-slim.tsv \ 
       --unit "32 Régiment d’Infanterie Motorisée" \
-      --traverse-direction "both"
+      --traverse-direction "both" \
       --output output/32_rim_graph.grapml
 ```
  
@@ -34,7 +34,7 @@ To assist you, we have provided a laid out and formatted versions of the output 
 
 ## Data model
 
-Security Force Monitor data is stored in a flat representation of a directed acyclic graph. It describes a set of hierarchical relationships between units - like companies, battalions, brigades, divisions. 
+Security Force Monitor data is stored in a flat representation of a directed acyclic graph. It describes a set of hierarchical relationships between "units" - such as companies, battalions, brigades, divisions. 
 
 ### Fields
 
