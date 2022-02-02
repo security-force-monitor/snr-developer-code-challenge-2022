@@ -24,7 +24,7 @@ The command should be executed from the command line in the following manner:
 graph --input data/202106251341-HEAD-Mali-Backup-slim.tsv \ 
       --unit "32 Régiment d’Infanterie Motorisée" \
       --traverse-direction "both" \
-      --output output/32_rim_graph.grapml
+      --output output/32_rim_graph.graphml
 ```
  
 The expected output from this command, in GraphML format, is provided in `output/324_cd_command_chain_raw.graphml`. 
