@@ -2,35 +2,35 @@
 
 Hello and welcome to Security Force Monitor's (SFM) code challenge for Senior Developers!
 
-We're asking you to do a data wrangling and tooling task. You'll be creating a tool that transforms SFM's tabular data about security force organizational structures into a graph that analysed and visualised.
+We're asking you to do a data wrangling and tooling task. You'll be creating a script that transforms SFM's tabular data about security force organizational structures into a graph that can be analysed and visualised.
 
-### Task
+### The challenge...
 
-The data provided in `data/202106251341-HEAD-Mali-Backup-slim.tsv` describes the security and defences forces of Mali. 
+The data provided in `data/202106251341-HEAD-Mali-Backup-slim.tsv` describes the security and defence forces of Mali. 
 
 The task is as follows:
 
-- Create a command line tool that can construct a directed graph from the given data, show the parentage and children of the unit called `32 Régiment d’Infanterie Motorisée` and output it in GraphML format.
+- Write a script that constructs a directed graph from this data, shows the full parentage and children of the unit called `32 Régiment d’Infanterie Motorisée` and outputs in GraphML format.
 
-Your application should be:
+Your response to this challenge should be:
 
-- Written in Python
-- Make use of the [NetworkX](https://networkx.org/) library
-- be called from the default macOS `zsh` terminal 
+- Written in Python; and,
+- Make use of the [NetworkX](https://networkx.org/) library.
 
-The command should be executed from the command line in the following manner:
+The attribute to use as a node label is:
 
-```
-graph --input data/202106251341-HEAD-Mali-Backup-slim.tsv \ 
-      --unit "32 Régiment d’Infanterie Motorisée" \
-      --traverse-direction "both" \
-      --output output/32_rim_graph.graphml
-```
+ - `unit:name`
+
+The attributes to use in the edge label are a composite of:
+
+ - `unit:related_unit_first_cited_date`
+ - `unit:related_unit_first_cited_date_start`
+ - `unit:related_unit_last_cited_date`
+ - `unit:related_unit_open`
  
-The expected output from this command, in GraphML format, is provided in `output/324_cd_command_chain_raw.graphml`. 
+The expected output of your script, in GraphML format, is provided in `output/324_cd_command_chain_raw.graphml`. 
 
 To assist you, we have provided a laid out and formatted versions of the output are provided in `examples/324_cdm_command_chain_formatted.graphml` and `examples/324_cdm_command_chain_formatted.pdf`. We laid out the graph using [yEd Graph Editor](https://www.yworks.com/products/yed).
-
 
 ## Data model
 
