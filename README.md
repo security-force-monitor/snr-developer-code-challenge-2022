@@ -59,7 +59,7 @@ Position|Name|Description
 6|`unit:related_unit`|Name of the related unit|
 7|`unit:related_unit_class`|Nature of authority in relationship ("command", "informal","administrative")|
 8|`unit:related_unit_first_cited_date`|Full or partial date when the relationship was first observed, or strarted|
-9|`unit:related_unit_first_cited_date_start`|Whether the date on which relationsip was first observed is an actual start date ("Y"), or just the earliest observation ("N"|
+9|`unit:related_unit_first_cited_date_start`|Whether the date on which relationsip was first observed is an actual start date ("Y"), or just the earliest observation ("N")|
 10|`unit:related_unit_last_cited_date`|Full or partial date when the relationship was most recently observed, or ended|
 11|`unit:related_unit_open`|Whether the date the relationship between units is open-ended ("Y") or not ("N","E")|
 
