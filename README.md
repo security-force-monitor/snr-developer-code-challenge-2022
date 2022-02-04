@@ -82,8 +82,9 @@ To transform the tabular data into a graph, consider the following rules:
 ├── README.md
 ├── data
 │   └── 202106251341-HEAD-Mali-Backup-slim.tsv
-└── examples
-    ├── 324_cdm_command_chain_formatted.graphml
-    ├── 324_cdm_command_chain_formatted.pdf
-    └── 324_cdm_command_chain_raw.graphml.graphml
+├── examples
+│   ├── 324_cdm_command_chain_formatted.graphml
+│   └── 324_cdm_command_chain_formatted.pdf
+└── output
+    └── 324_cdm_command_chain_raw.graphml
 ```
